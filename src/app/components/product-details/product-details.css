@@ -1,0 +1,29 @@
+.details-container {
+  background-color: #f5ebe0;
+  width: 70%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.details-container img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+.details-container h1 {
+  color: #7f5539;
+}
+
+.details-price {
+  color: #9c6644;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  color: #5e503f;
+  font-size: 16px;
+}

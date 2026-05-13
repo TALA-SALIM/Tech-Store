@@ -18,10 +18,10 @@ export class Cart {
     this.items = this.cartService.getItems();
   }
 
-  removeItem(index: number) {
-    this.cartService.removeItem(index);
-  }
-
+removeItem(index: number) {
+  this.cartService.removeItem(index);
+  this.message = 'Product removed from cart!';
+}
   getTotal() {
     return this.items.reduce((total, item) => total + item.price, 0);
   }
@@ -29,5 +29,6 @@ export class Cart {
   saveName() {
   this.cartService.setCustomerName(this.customerName);
 }
+message = '';
 
 }

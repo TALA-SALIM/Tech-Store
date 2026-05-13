@@ -1,37 +1,52 @@
 <div class="cart-container">
-    <h1>Shopping Cart</h1>
 
-  <input
-  type="text"
-  [(ngModel)]="customerName"
-  placeholder="Enter your name"
-/>
+  <h1>Shopping Cart</h1>
 
-<p *ngIf="customerName.length > 0 && customerName.length < 3">
-  Name must be at least 3 characters
-</p>
-  
-<button
-  class="checkout-btn"
-  routerLink="/success"
-  [disabled]="customerName.length < 3"
-  (click)="saveName()"
->
-  Checkout
-</button>
+  <div *ngIf="items.length === 0" class="empty-cart">
+    Your cart is empty 🛒
+  </div>
 
-  <div class="cart-item" *ngFor="let item of items; let i = index">
+  <div *ngIf="items.length > 0">
 
-  <h3>{{ item.name }}</h3>
+    <input
+      type="text"
+      [(ngModel)]="customerName"
+      placeholder="Enter your name"
+    />
 
-  <p>${{ item.price }}</p>
+    <p *ngIf="customerName.length > 0 && customerName.length < 3">
+      Name must be at least 3 characters
+    </p>
 
-  <button (click)="removeItem(i)">
-    Remove
-  </button>
+    <button
+      class="checkout-btn"
+      routerLink="/success"
+      [disabled]="customerName.length < 3"
+      (click)="saveName()"
+    >
+      Checkout
+    </button>
 
-  <hr>
+    <p *ngIf="message">
+      {{ message }}
+    </p>
+
+    <div class="cart-item" *ngFor="let item of items; let i = index">
+
+      <h3>{{ item.name }}</h3>
+
+      <p>${{ item.price }}</p>
+
+      <button (click)="removeItem(i)">
+        Remove
+      </button>
+
+      <hr>
+
+    </div>
+
+    <h2>Total: ${{ getTotal() }}</h2>
+
+  </div>
 
 </div>
-
-<h2>Total: ${{ getTotal() }}</h2>

@@ -8,6 +8,17 @@
   margin-bottom: 15px;
   border-radius: 10px;
 }
+.empty-cart{
+  background: #efe6d8;
+  color: #8b6b3f;
+  text-align: center;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
 .cart-item button {
   background-color: #8b6f47;

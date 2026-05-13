@@ -1,18 +1,9 @@
 <div class="products-container">
-  <div class="product-card" *ngFor="let product of products">
-<button routerLink="/cart">
-  Go To Cart
-</button>
 
-    <img [src]="product.imageUrl" width="200">
-
-    <h2>{{ product.name }}</h2>
-
-    <p>${{ product.price }}</p>
-
-<button (click)="addToCart(product)">
-  Add To Cart
-</button>
-  </div>
+  <app-product-item   
+      *ngFor="let product of products"
+    [product]="product"
+    (add)="handleAdd($event)">
+  </app-product-item>
 
 </div>
