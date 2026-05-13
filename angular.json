@@ -1,12 +1,14 @@
+
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "2ef3b4be-607f-4999-847c-96d896b41cc8"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "To-Do-smart": {
+    "smart-store": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -64,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "To-Do-smart:build:production"
+              "buildTarget": "smart-store:build:production"
             },
             "development": {
-              "buildTarget": "To-Do-smart:build:development"
+              "buildTarget": "smart-store:build:development"
             }
           },
           "defaultConfiguration": "development"

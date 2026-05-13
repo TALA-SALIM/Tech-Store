@@ -1,6 +1,64 @@
-# ToDoSmart
+# smart-tech
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+Smart-TECH is an Angular e-commerce web application built for the Udacity Nanodegree.
+
+## Features
+
+- Product listing
+- Shopping cart
+- Add and remove products
+- Cart total calculation
+- Success checkout page
+- Dynamic customer name message
+- Cart badge counter
+- Form validation using ngModel
+- Angular routing
+- Shared cart service
+
+## Technologies Used
+
+- Angular
+- TypeScript
+- CSS
+- Angular Router
+- HttpClient
+
+## Installation
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## Run Project
+
+Start the development server:
+
+```bash
+ng serve
+```
+
+Then open:
+
+```text
+http://localhost:4200
+```
+
+## Project Structure
+
+```text
+src/
+ ├── app/
+ │   ├── components/
+ │   ├── services/
+ │   ├── models/
+ │   ├── app.routes.ts
+ │   └── app.ts
+```
+
+
 
 ## Development server
 
@@ -57,3 +115,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Author
+
+Developed by Tala.

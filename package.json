@@ -1,5 +1,5 @@
 {
-  "name": "to-do-smart",
+  "name": "smart-store",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:To-Do-smart": "node dist/To-Do-smart/server/server.mjs"
+    "serve:ssr:smart-store": "node dist/smart-store/server/server.mjs"
   },
   "private": true,
   "packageManager": "npm@11.9.0",
