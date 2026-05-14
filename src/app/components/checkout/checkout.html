@@ -1,1 +1,8 @@
-<p>checkout works!</p>
+<input
+  [(ngModel)]="customerName"
+  (ngModelChange)="onNameChange($event)"
+  name="name"
+  placeholder="Enter your name"
+  required
+  minlength="3"
+/>

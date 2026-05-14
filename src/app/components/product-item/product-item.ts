@@ -13,7 +13,7 @@ export class ProductItemComponent {
 
   @Output() add = new EventEmitter<Product>();
 
-  addToCart() {
-    this.add.emit(this.product);
-  }
+ addToCart() {
+  this.add.emit(this.product);
+}
 }

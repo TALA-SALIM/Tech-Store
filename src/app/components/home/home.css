@@ -1,0 +1,32 @@
+.home-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f7f1e6;
+}
+
+.home-container h1 {
+  color: #8b6b3f;
+  font-size: 40px;
+}
+
+.home-container p {
+  color: #6b5a45;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  background: #8b6b3f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6b512f;
+}

@@ -5,3 +5,19 @@
   padding: 30px;
   background-color: #fff8f0;
 }
+
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: #8b6b3f;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+
+  z-index: 99999;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}

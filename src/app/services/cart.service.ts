@@ -5,29 +5,30 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
 
-  items: any[] = [];
-
-  addToCart(product: any) {
-    this.items.push(product);
-  }
+  private items: any[] = [];
+  private customerName: string = '';
 
   getItems() {
     return this.items;
   }
 
+  addToCart(product: any) {
+    this.items.push(product);
+  }
+
+  removeItem(index: number) {
+    this.items.splice(index, 1);
+  }
+
   clearCart() {
     this.items = [];
-    return this.items;
   }
-  removeItem(index: number) {
-  this.items.splice(index, 1);
-}
-customerName = '';
-setCustomerName(name: string) {
-  this.customerName = name;
-}
 
-getCustomerName() {
-  return this.customerName;
-}
+  setCustomerName(name: string) {
+    this.customerName = name;
+  }
+
+  getCustomerName() {
+    return this.customerName;
+  }
 }
