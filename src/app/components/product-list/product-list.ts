@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { CartService } from '../../services/cart.service';
 import { RouterModule } from '@angular/router';
 import { ProductItemComponent } from '../product-item/product-item';
-
+import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-product-list',
   standalone: true,
@@ -18,15 +17,15 @@ export class ProductList implements OnInit {
   message: string | null = null;
 
   constructor(
-    private http: HttpClient,
-    private cartService: CartService
+    private cartService: CartService,
+    private productService: ProductService
   ) {}
 
-  ngOnInit() {
-    this.http.get<any[]>('assets/data.json').subscribe(data => {
-      this.products = data;
-    });
-  }
+ ngOnInit() {
+  this.productService.getProducts().subscribe(data => {
+    this.products = data;
+  });
+}
 
   handleAdd(product: any) {
     this.cartService.addToCart(product);
